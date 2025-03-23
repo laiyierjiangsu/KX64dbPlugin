@@ -1,5 +1,6 @@
 #include "plugin.h"
-
+#include <cassert>
+#include "memory.h"
 // Examples: https://github.com/x64dbg/x64dbg/wiki/Plugins
 // References:
 // - https://help.x64dbg.com/en/latest/developers/plugins/index.html
@@ -31,6 +32,7 @@ static bool cbExampleCommand(int argc, char** argv)
         return success;
     };
 
+	
     duint a = 0;
     if (!parseExpr(argv[1], a))
         return false;
@@ -52,6 +54,29 @@ static bool cbExampleCommand(int argc, char** argv)
     return true;
 }
 
+// Callback for the first menu item
+static void cbMenuItemExample(CBTYPE type, void* callbackInfo)
+{
+    if (type == CB_MENUENTRY)
+    {
+        PLUG_CB_MENUENTRY* info = (PLUG_CB_MENUENTRY*)callbackInfo;
+		// Do something meaningful
+        dprintf("Example Menu Item 1 clicked entry : %d", info->hEntry);
+    }
+}
+
+static bool cbMemoryCommand(int argc, char** argv)
+{
+	if (argc < 3)
+	{
+		dputs("Usage: " CMD_MEMORY_WRITE "format, buff");
+
+		// Return false to indicate failure (used for scripting)
+		return false;
+	}
+    return true;
+}
+
 // Initialize your plugin data here.
 bool pluginInit(PLUG_INITSTRUCT* initStruct)
 {
@@ -59,6 +84,12 @@ bool pluginInit(PLUG_INITSTRUCT* initStruct)
 
     // Prefix of the functions to call here: _plugin_register
     _plugin_registercommand(pluginHandle, PLUGIN_NAME, cbExampleCommand, true);
+
+    _plugin_registercommand(pluginHandle, CMD_MEMORY_WRITE, cbMemoryCommand, true);
+
+    // Register menu item callback
+    _plugin_registercallback(pluginHandle, CB_MENUENTRY, cbMenuItemExample);
+
 
     // Return false to cancel loading the plugin.
     return true;
@@ -80,7 +111,13 @@ void pluginStop()
 // You can get the HWND using GuiGetWindowHandle()
 void pluginSetup()
 {
-    // Prefix of the functions to call here: _plugin_menu
+    // Create a menu
+    int hMenu1 = _plugin_menuadd(hMenu, "&Example Menu");
 
+    // Add menu items
+    if (!_plugin_menuaddentry(hMenu1, 2, "&Example Menu Item 1"))
+    {
+        _plugin_logputs("Failed to add menu item 1\n");
+    }
     dprintf("pluginSetup(pluginHandle: %d)\n", pluginHandle);
 }

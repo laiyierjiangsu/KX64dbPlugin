@@ -27,7 +27,7 @@ endif()
 include("cmake/msvc-static-runtime.cmake")
 include("cmake/msvc-configurations.cmake")
 
-project(KX64dbPlugin)
+project(KDbg)
 
 include(FetchContent)
 
@@ -46,8 +46,8 @@ FetchContent_MakeAvailable(x64dbg)
 
 include("cmake/x64dbg.cmake")
 
-# Target: KX64dbPlugin
-set(KX64dbPlugin_SOURCES
+# Target: KDbg
+set(KDbg_SOURCES
 	"src/plugin.cpp"
 	"src/pluginmain.cpp"
 	"src/plugin.h"
@@ -55,8 +55,8 @@ set(KX64dbPlugin_SOURCES
 	cmake.toml
 )
 
-x64dbg_plugin(KX64dbPlugin)
+x64dbg_plugin(KDbg)
 
-target_sources(KX64dbPlugin PRIVATE ${KX64dbPlugin_SOURCES})
-source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${KX64dbPlugin_SOURCES})
+target_sources(KDbg PRIVATE ${KDbg_SOURCES})
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${KDbg_SOURCES})
 

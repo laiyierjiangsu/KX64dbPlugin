@@ -43,6 +43,23 @@ function(x64dbg_plugin target)
     # Set plugin name based on the target
     target_compile_definitions(${target} PRIVATE "-DPLUGIN_NAME=\"${target}\"")
 
+    # Set output directory using a variable
+    set(PLUGIN_OUTPUT_DIR "${CMAKE_BINARY_DIR}/../X64dbg/release/x64/plugins")
+    set_target_properties(${target} PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${PLUGIN_OUTPUT_DIR}"
+        LIBRARY_OUTPUT_DIRECTORY "${PLUGIN_OUTPUT_DIR}"
+        ARCHIVE_OUTPUT_DIRECTORY "${PLUGIN_OUTPUT_DIR}"
+    )
+
+    # TODO :Set output directories for specific build types
+    # can not remove debug/release folder
+    #foreach(OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES})
+        #string(TOUPPER ${OUTPUTCONFIG} OUTPUTCONFIG)
+        #set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} "${PLUGIN_OUTPUT_DIR}")
+        #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_${OUTPUTCONFIG} "${PLUGIN_OUTPUT_DIR}")
+        #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${OUTPUTCONFIG} "${PLUGIN_OUTPUT_DIR}")
+    #endforeach()
+
     # Support PluginDevHelper (https://github.com/x64dbg/PluginDevHelper)
     if(CMAKE_GENERATOR MATCHES "Visual Studio")
         add_custom_command(TARGET ${target} PRE_LINK COMMAND if exist "\"$(SolutionDir)PluginDevBuildTool.exe\"" "(\"$(SolutionDir)PluginDevBuildTool.exe\"" unload "\"$(TargetPath)\")" else (echo Copy PluginDevBuildTool.exe next to the .sln to automatically reload plugins when building))

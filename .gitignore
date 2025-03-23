@@ -3,3 +3,5 @@ build*/
 .vs/
 cmake-build-*/
 /CMakeSettings.json
+X64dbg/release/x64/x64dbg.ini
+X64dbg/release/x64/plugins/Debug

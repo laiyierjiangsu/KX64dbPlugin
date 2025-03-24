@@ -1,0 +1,63 @@
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserBlockInput = 0x00007FFDCE7389B0
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserQueryWindow = 0x00007FFDCE731690
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserGetForegroundWindow = 0x00007FFDCE731BB0
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserBuildHwndList = 0x00007FFDCE731810
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserFindWindowEx = 0x00007FFDCE7321B0
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserGetClassName = 0x00007FFDCE732350
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserInternalGetWindowText = 0x00007FFDCE732070
+2025.03.19 15:33:56 INFO: Loaded VA for NtUserGetThreadState = 0x00007FFDCE7314D0
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 00007FFDD1190570 _NtQuerySystemInformation 00007FFDD1190A90 _NtQueryInformationProcess 00007FFDD11906F0 _NtSetInformationProcess 00007FFDD1190750 _NtQueryObject 00007FFDD11905D0
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> _NtYieldExecution 00007FFDD1190C90 _NtGetContextThread 00007FFDD11922E0 _NtSetContextThread 00007FFDD11936C0 _KiUserExceptionDispatcher 00007FFDD1194450 _NtContinue 00007FFDD1190C30
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> _NtClose 00007FFDD11905B0 _NtDuplicateObject 00007FFDD1190B50 _NtSetDebugFilterState 00007FFDD11936E0 _NtCreateThread 00007FFDD1190D90 _NtCreateThreadEx 00007FFDD1191CA0 _NtQuerySystemTime 00007FFDD1190F10 _NtQueryPerformanceCounter 00007FFDD11909F0 _NtResumeThread 00007FFDD1190E10
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> Hooking NtClose
+2025.03.19 15:33:56 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
+2025.03.19 15:33:56 DEBUG: ApplyKernel32Hook -> Using Kernelbase 00007FFDCE350000 instead of kernel32 00007FFDCEDC0000
+2025.03.19 15:33:56 DEBUG: ApplyKernel32Hook -> _GetTickCount 00007FFDCE3A0440 _GetTickCount64 00007FFDCE3AA1C0 _GetLocalTime 00007FFDCE35D0C0 _GetSystemTime 00007FFDCE3B75D0 _OutputDebugStringA 00007FFDCE3AFBD0
+2025.03.19 15:33:56 DEBUG: ApplyUserHook -> HookedNtUserBlockInput 000002B5CF021E3C HookedNtUserFindWindowEx 000002B5CF021E98 HookedNtUserBuildHwndList 000002B5CF021FD0 HookedNtUserBuildHwndList_Eight 000002B5CF022030 HookedNtUserQueryWindow 000002B5CF02209C HookedNtUserGetForegroundWindow 000002B5CF0220FC
+2025.03.19 15:33:56 DEBUG: ApplyUserHook -> _NtUserBlockInput 00007FFDCE7389B0 _NtUserFindWindowEx 00007FFDCE7321B0 _NtUserBuildHwndList 00007FFDCE731810 _NtUserQueryWindow 00007FFDCE731690 _NtUserGetForegroundWindow 00007FFDCE731BB0
+2025.03.19 15:33:56 INFO: Hook injection successful, image base 000002B5CF020000
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserBlockInput = 0x00007FFDCE7389B0
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserQueryWindow = 0x00007FFDCE731690
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserGetForegroundWindow = 0x00007FFDCE731BB0
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserBuildHwndList = 0x00007FFDCE731810
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserFindWindowEx = 0x00007FFDCE7321B0
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserGetClassName = 0x00007FFDCE732350
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserInternalGetWindowText = 0x00007FFDCE732070
+2025.03.19 16:13:59 INFO: Loaded VA for NtUserGetThreadState = 0x00007FFDCE7314D0
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 00007FFDD1190570 _NtQuerySystemInformation 00007FFDD1190A90 _NtQueryInformationProcess 00007FFDD11906F0 _NtSetInformationProcess 00007FFDD1190750 _NtQueryObject 00007FFDD11905D0
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> _NtYieldExecution 00007FFDD1190C90 _NtGetContextThread 00007FFDD11922E0 _NtSetContextThread 00007FFDD11936C0 _KiUserExceptionDispatcher 00007FFDD1194450 _NtContinue 00007FFDD1190C30
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> _NtClose 00007FFDD11905B0 _NtDuplicateObject 00007FFDD1190B50 _NtSetDebugFilterState 00007FFDD11936E0 _NtCreateThread 00007FFDD1190D90 _NtCreateThreadEx 00007FFDD1191CA0 _NtQuerySystemTime 00007FFDD1190F10 _NtQueryPerformanceCounter 00007FFDD11909F0 _NtResumeThread 00007FFDD1190E10
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> Hooking NtClose
+2025.03.19 16:13:59 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
+2025.03.19 16:13:59 DEBUG: ApplyKernel32Hook -> Using Kernelbase 00007FFDCE350000 instead of kernel32 00007FFDCEDC0000
+2025.03.19 16:13:59 DEBUG: ApplyKernel32Hook -> _GetTickCount 00007FFDCE3A0440 _GetTickCount64 00007FFDCE3AA1C0 _GetLocalTime 00007FFDCE35D0C0 _GetSystemTime 00007FFDCE3B75D0 _OutputDebugStringA 00007FFDCE3AFBD0
+2025.03.19 16:13:59 DEBUG: ApplyUserHook -> HookedNtUserBlockInput 0000020A53F21E3C HookedNtUserFindWindowEx 0000020A53F21E98 HookedNtUserBuildHwndList 0000020A53F21FD0 HookedNtUserBuildHwndList_Eight 0000020A53F22030 HookedNtUserQueryWindow 0000020A53F2209C HookedNtUserGetForegroundWindow 0000020A53F220FC
+2025.03.19 16:13:59 DEBUG: ApplyUserHook -> _NtUserBlockInput 00007FFDCE7389B0 _NtUserFindWindowEx 00007FFDCE7321B0 _NtUserBuildHwndList 00007FFDCE731810 _NtUserQueryWindow 00007FFDCE731690 _NtUserGetForegroundWindow 00007FFDCE731BB0
+2025.03.19 16:13:59 INFO: Hook injection successful, image base 0000020A53F20000
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserBlockInput = 0x00007FFDCE7389B0
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserQueryWindow = 0x00007FFDCE731690
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserGetForegroundWindow = 0x00007FFDCE731BB0
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserBuildHwndList = 0x00007FFDCE731810
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserFindWindowEx = 0x00007FFDCE7321B0
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserGetClassName = 0x00007FFDCE732350
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserInternalGetWindowText = 0x00007FFDCE732070
+2025.03.21 11:24:12 INFO: Loaded VA for NtUserGetThreadState = 0x00007FFDCE7314D0
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> _NtSetInformationThread 00007FFDD1190570 _NtQuerySystemInformation 00007FFDD1190A90 _NtQueryInformationProcess 00007FFDD11906F0 _NtSetInformationProcess 00007FFDD1190750 _NtQueryObject 00007FFDD11905D0
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> _NtYieldExecution 00007FFDD1190C90 _NtGetContextThread 00007FFDD11922E0 _NtSetContextThread 00007FFDD11936C0 _KiUserExceptionDispatcher 00007FFDD1194450 _NtContinue 00007FFDD1190C30
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> _NtClose 00007FFDD11905B0 _NtDuplicateObject 00007FFDD1190B50 _NtSetDebugFilterState 00007FFDD11936E0 _NtCreateThread 00007FFDD1190D90 _NtCreateThreadEx 00007FFDD1191CA0 _NtQuerySystemTime 00007FFDD1190F10 _NtQueryPerformanceCounter 00007FFDD11909F0 _NtResumeThread 00007FFDD1190E10
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> Hooking NtSetInformationThread
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> Hooking NtQueryInformationProcess
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> Hooking NtQueryObject
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> Hooking NtClose
+2025.03.21 11:24:12 DEBUG: ApplyNtdllHook -> Hooking NtDuplicateObject
+2025.03.21 11:24:12 DEBUG: ApplyKernel32Hook -> Using Kernelbase 00007FFDCE350000 instead of kernel32 00007FFDCEDC0000
+2025.03.21 11:24:12 DEBUG: ApplyKernel32Hook -> _GetTickCount 00007FFDCE3A0440 _GetTickCount64 00007FFDCE3AA1C0 _GetLocalTime 00007FFDCE35D0C0 _GetSystemTime 00007FFDCE3B75D0 _OutputDebugStringA 00007FFDCE3AFBD0
+2025.03.21 11:24:12 DEBUG: ApplyUserHook -> HookedNtUserBlockInput 000001EA359C1E3C HookedNtUserFindWindowEx 000001EA359C1E98 HookedNtUserBuildHwndList 000001EA359C1FD0 HookedNtUserBuildHwndList_Eight 000001EA359C2030 HookedNtUserQueryWindow 000001EA359C209C HookedNtUserGetForegroundWindow 000001EA359C20FC
+2025.03.21 11:24:12 DEBUG: ApplyUserHook -> _NtUserBlockInput 00007FFDCE7389B0 _NtUserFindWindowEx 00007FFDCE7321B0 _NtUserBuildHwndList 00007FFDCE731810 _NtUserQueryWindow 00007FFDCE731690 _NtUserGetForegroundWindow 00007FFDCE731BB0
+2025.03.21 11:24:12 INFO: Hook injection successful, image base 000001EA359C0000
